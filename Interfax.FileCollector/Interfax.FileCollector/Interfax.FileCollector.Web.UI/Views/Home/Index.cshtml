@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Interfax.FileCollector.Web.UI.Models.FileStorageModel>
+
+@{
+    ViewBag.Title = "FileCollector";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <table>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Size)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CreateDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LoadDate)
+                    </th>
+                </tr>
+
+                @foreach (var item in Model) {
+                    <tr>
+                        <td>
+                            @Html.ActionLink(Html.DisplayFor(modelItem => item.Name).ToString(), "DownLoad", new { id=item.Id })
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Size)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreateDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LoadDate)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </section>
+}
+

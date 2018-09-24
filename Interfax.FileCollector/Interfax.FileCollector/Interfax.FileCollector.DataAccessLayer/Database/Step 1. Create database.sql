@@ -1,0 +1,24 @@
+USE [master]
+
+CREATE DATABASE [FileCollector] 
+	ON PRIMARY 
+		( NAME = N'FileCollector', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\FileCollector.mdf' , SIZE = 5120KB , FILEGROWTH = 1024KB )
+	LOG ON 
+		( NAME = N'FileCollector_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\FileCollector_log.ldf' , SIZE = 1024KB , FILEGROWTH = 10%)
+	GO
+	EXEC sys.sp_configure N'filestream access level', N'2'
+	GO
+	RECONFIGURE WITH OVERRIDE
+	GO
+	ALTER DATABASE [FileCollector] ADD FILEGROUP [FILESTREAM] CONTAINS FILESTREAM
+	GO
+	ALTER DATABASE [FileCollector] ADD FILE ( NAME = N'FileCollector_filestream', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\FileCollector_filestream' ) TO FILEGROUP [FILESTREAM]
+	GO
+	ALTER DATABASE [FileCollector] SET FILESTREAM( DIRECTORY_NAME = N'FileCollector' ) WITH NO_WAIT
+	GO
+	ALTER DATABASE [FileCollector] SET FILESTREAM( NON_TRANSACTED_ACCESS = FULL ) WITH NO_WAIT
+	GO
+	ALTER DATABASE [FileCollector] SET RECOVERY SIMPLE WITH NO_WAIT
+	GO
+
+

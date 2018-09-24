@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfax.FileCollector.DataAccessLayer", "Interfax.FileCollector.DataAccessLayer\Interfax.FileCollector.DataAccessLayer.csproj", "{CB607F86-1FBA-4940-A833-DFFBDE5E208E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfax.FileCollector.UnitTest", "Interfax.FileCollector.UnitTest\Interfax.FileCollector.UnitTest.csproj", "{A4A6A080-430D-4D31-A860-975A3206FB20}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7CC6B00E-7884-4B36-ACF0-9DF91DB7351D} = {7CC6B00E-7884-4B36-ACF0-9DF91DB7351D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfax.FileCollector.Web.Service", "Interfax.FileCollector.Web.Service\Interfax.FileCollector.Web.Service.csproj", "{7CC6B00E-7884-4B36-ACF0-9DF91DB7351D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfax.FileCollector.Web.UI", "Interfax.FileCollector.Web.UI\Interfax.FileCollector.Web.UI.csproj", "{6DB944B9-6764-422A-ADF3-1AE604ACA0C7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7CC6B00E-7884-4B36-ACF0-9DF91DB7351D} = {7CC6B00E-7884-4B36-ACF0-9DF91DB7351D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfax.FileCollector.Windows.Service", "Interfax.FileCollector.Windows.Service\Interfax.FileCollector.Windows.Service.csproj", "{F8B74B53-F878-4BD6-84DB-E3566B010478}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7CC6B00E-7884-4B36-ACF0-9DF91DB7351D} = {7CC6B00E-7884-4B36-ACF0-9DF91DB7351D}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB607F86-1FBA-4940-A833-DFFBDE5E208E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB607F86-1FBA-4940-A833-DFFBDE5E208E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB607F86-1FBA-4940-A833-DFFBDE5E208E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB607F86-1FBA-4940-A833-DFFBDE5E208E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4A6A080-430D-4D31-A860-975A3206FB20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4A6A080-430D-4D31-A860-975A3206FB20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4A6A080-430D-4D31-A860-975A3206FB20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4A6A080-430D-4D31-A860-975A3206FB20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CC6B00E-7884-4B36-ACF0-9DF91DB7351D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CC6B00E-7884-4B36-ACF0-9DF91DB7351D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CC6B00E-7884-4B36-ACF0-9DF91DB7351D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CC6B00E-7884-4B36-ACF0-9DF91DB7351D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DB944B9-6764-422A-ADF3-1AE604ACA0C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB944B9-6764-422A-ADF3-1AE604ACA0C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB944B9-6764-422A-ADF3-1AE604ACA0C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB944B9-6764-422A-ADF3-1AE604ACA0C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8B74B53-F878-4BD6-84DB-E3566B010478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B74B53-F878-4BD6-84DB-E3566B010478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B74B53-F878-4BD6-84DB-E3566B010478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B74B53-F878-4BD6-84DB-E3566B010478}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище FileCollectorModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="Хранилище FileCollectorModelContainer" />
+        <Function Name="spFileDownload" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="spFileInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="CreateDate" Type="datetimeoffset" Mode="In" />
+          <Parameter Name="Data" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="spFileSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="Name" Type="nvarchar" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FileCollectorModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="FileCollectorEntities" p1:LazyLoadingEnabled="true" >
+          <FunctionImport Name="spFileInsert" ReturnType="Collection(Guid)">
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="CreateDate" Mode="In" Type="DateTimeOffset" />
+            <Parameter Name="Data" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="spFileDownload" ReturnType="Collection(FileCollectorModel.spFileDownload_Result)">
+          <Parameter Name="Id" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="spFileSelect" ReturnType="Collection(FileCollectorModel.spFileSelect_Result)">
+            <Parameter Name="Id" Mode="In" Type="Guid" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="spFileDownload_Result">
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="Path" Nullable="true" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="255" />
+          <Property Type="Int64" Name="Size" Nullable="true" />
+          <Property Type="DateTimeOffset" Name="CreateDate" Nullable="false" />
+          <Property Type="DateTimeOffset" Name="LoadDate" Nullable="false" />
+          <Property Type="Binary" Name="Data" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spFileSelect_Result">
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="Path" Nullable="true" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="255" />
+          <Property Type="Int64" Name="Size" Nullable="true" />
+          <Property Type="DateTimeOffset" Name="CreateDate" Nullable="false" />
+          <Property Type="DateTimeOffset" Name="LoadDate" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище FileCollectorModelContainer" CdmEntityContainer="FileCollectorEntities" >
+          <FunctionImportMapping FunctionImportName="spFileInsert" FunctionName="Хранилище FileCollectorModel.spFileInsert" />
+          <FunctionImportMapping FunctionImportName="spFileDownload" FunctionName="Хранилище FileCollectorModel.spFileDownload">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FileCollectorModel.spFileDownload_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spFileSelect" FunctionName="Хранилище FileCollectorModel.spFileSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FileCollectorModel.spFileSelect_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

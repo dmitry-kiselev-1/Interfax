@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Interfax.FileCollector.Web.Service.FileStorageService" CodeBehind="FileCollectorService.svc.cs" %>

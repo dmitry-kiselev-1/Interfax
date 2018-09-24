@@ -1,0 +1,1 @@
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\installutil.exe "C:\TFS\Projects\Interfax.FileCollector\Interfax.FileCollector.Windows.Service\bin\Debug\Interfax.FileCollector.Windows.Service.exe"

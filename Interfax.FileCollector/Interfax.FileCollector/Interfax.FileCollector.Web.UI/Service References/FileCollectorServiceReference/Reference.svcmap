@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f0ac70f4-1ddd-4c48-ae0e-ab5e19ba2277" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2010/FileCollectorService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FileCollectorService1.xsd" MetadataType="Schema" ID="b4b75e32-7d09-45d1-b22c-1fcbedac9a53" SourceId="1" SourceUrl="http://localhost:2010/FileCollectorService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FileCollectorService.xsd" MetadataType="Schema" ID="d6a72840-dbb2-423a-9c3e-8ef55373bd8d" SourceId="1" SourceUrl="http://localhost:2010/FileCollectorService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FileCollectorService3.xsd" MetadataType="Schema" ID="e8f01f01-2a5b-40b6-bd5c-ba6c9abfa74c" SourceId="1" SourceUrl="http://localhost:2010/FileCollectorService.svc?xsd=xsd3" />
+    <MetadataFile FileName="FileStorageService.wsdl" MetadataType="Wsdl" ID="f1a63e71-b889-45f6-8c6d-738f75a27773" SourceId="1" SourceUrl="http://localhost:2010/FileCollectorService.svc?wsdl" />
+    <MetadataFile FileName="FileCollectorService2.xsd" MetadataType="Schema" ID="cc4bc57b-29b3-46ae-ba38-cd1060646354" SourceId="1" SourceUrl="http://localhost:2010/FileCollectorService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FileCollectorService.disco" MetadataType="Disco" ID="c4e9bc99-759c-43c2-b2f5-aab0e3fe38fb" SourceId="1" SourceUrl="http://localhost:2010/FileCollectorService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

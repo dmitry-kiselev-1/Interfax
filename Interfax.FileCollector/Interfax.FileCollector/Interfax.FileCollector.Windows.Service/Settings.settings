@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Interfax.FileCollector.Windows.Service" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MonitoringPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Interfax\MonitoringPath\</Value>
+    </Setting>
+    <Setting Name="SizeErrorPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Interfax\SizeErrorPath\</Value>
+    </Setting>
+    <Setting Name="UploadErrorPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Interfax\UploadErrorPath\</Value>
+    </Setting>
+    <Setting Name="MaxUploadFileSize" Type="System.Int64" Scope="Application">
+      <Value Profile="(Default)">5242880</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
